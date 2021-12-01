@@ -31,3 +31,15 @@ email.addEventListener('input', function () {
       emailError.textContent = "Invalid Email";
     });
 
+// UC3 - Valid Mobile Format 
+
+const number = document.querySelector('#number');
+const errnumber = document.querySelector('.number-error');
+number.addEventListener('input', function () {
+  let numberRegex = RegExp('^[1-9]{2}[0-9]{10}$');
+  if (numberRegex.test(number.value)) {
+    errnumber.textContent = "";
+  } else 
+    errnumber.textContent = "Mobile is incorrect";
+  
+});
