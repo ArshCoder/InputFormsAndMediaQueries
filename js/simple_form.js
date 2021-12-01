@@ -56,3 +56,17 @@ password.addEventListener('input',function(){
         errPass.textContent="Enter valid password";
     
 });
+
+// UC5 - Password Pattern Rule 1-4 
+
+const pwd = document.querySelector("#pwd");
+const errPass = document.querySelector(".pwd-error");
+password.addEventListener('input',function(){
+    let passRegex = RegExp("^([!@#$%^&*()]?[A-Za-z0-9]+){8,}$");
+    if(passRegex.test(password.value)){
+        errPass.textContent="";
+    }else
+        errPass.textContent="Enter valid password";
+    
+});
+
