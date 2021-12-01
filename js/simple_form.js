@@ -43,3 +43,16 @@ number.addEventListener('input', function () {
     errnumber.textContent = "Mobile is incorrect";
   
 });
+
+// UC4 - Password Pattern Rule - 1
+
+const pwd = document.querySelector("#pwd");
+const errPass = document.querySelector(".pwd-error");
+password.addEventListener('input',function(){
+    let passRegex = RegExp("^[a-zA-Z]){8}$");
+    if(passRegex.test(password.value)){
+        errPass.textContent="";
+    }else
+        errPass.textContent="Enter valid password";
+    
+});
